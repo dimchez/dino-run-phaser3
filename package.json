@@ -4,8 +4,9 @@
     "description": "Chrome Dino Run game using Phaser 3",
     "main": "src/game.ts",
     "scripts": {
-        "dev": "rollup --config rollup.config.dev.mjs",
         "build": "rollup --config rollup.config.dist.mjs",
+        "dev": "rollup --config rollup.config.dev.mjs",
+        "deploy": "gh-pages -d dist",
         "watch": "rollup --watch --config rollup.config.dev.mjs"
     },
     "repository": {
@@ -24,6 +25,7 @@
         "@rollup/plugin-terser": "0.4.0",
         "@rollup/plugin-typescript": "11.1.0",
         "@rollup/plugin-url": "8.0.2",
+        "gh-pages": "^6.0.0",
         "phaser": "3.60.0",
         "pretier": "^0.0.1",
         "rollup": "3.20.2",
