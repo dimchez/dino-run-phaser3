@@ -7,6 +7,7 @@
         "build": "rollup --config rollup.config.dist.mjs",
         "dev": "rollup --config rollup.config.dev.mjs",
         "deploy": "gh-pages -d dist",
+        "predeploy": "echo dino-run-phaser.dimchez.com > dist/CNAME",
         "watch": "rollup --watch --config rollup.config.dev.mjs"
     },
     "repository": {

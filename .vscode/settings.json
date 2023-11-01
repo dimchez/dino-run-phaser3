@@ -6,5 +6,8 @@
     },
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "yaml.schemas": {
+        "https://json.schemastore.org/github-workflow.json": "file:///Users/dimchez/workspace/dimchez/dino-run-phaser3/.github/workflows/deploy.yml"
     }
 }
