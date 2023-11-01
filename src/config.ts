@@ -1,0 +1,23 @@
+export const GAME_SPEED_INCREMENT = 0.01;
+
+export const INITIAL_GAME_SPEED = 5;
+
+export const ENABLE_NIGHTMODE_ACHIEVEMENT_COUNT = 12;
+
+export const DISABLE_NIGHTMODE_ACHIEVEMENT_COUNT = 8;
+
+export const OBSTICLE_MAX_RESPAWN_TIME = 1000;
+
+export const MIN_JUMP_KEY_PRESS_DURATION = 100;
+
+export const MAX_JUMP_KEY_PRESS_DURATION = 200;
+
+export const MIN_SPEED_INCREASE = 50;
+
+export const MAX_SPEED_INCREASE = 100;
+
+export const MIN_JUMP_VELOCITY = -1200;
+
+export const MAX_JUMP_VELOCITY = -1600;
+
+export const ACHIEVEMENT_SCORE = 20;
