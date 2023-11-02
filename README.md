@@ -1,3 +1,5 @@
+[![Build & Deploy](https://github.com/dimchez/dino-run-phaser3/actions/workflows/deploy.yml/badge.svg?branch=main)](https://github.com/dimchez/dino-run-phaser3/actions/workflows/deploy.yml)
+
 # Chrome Dinosaur Run game clone using Phaser 3
 
 Based of quick-start [phaser3-typescript-project-template](https://github.com/photonstorm/phaser3-typescript-project-template) project template that combines Phaser 3.60 with [TypeScript 5](https://www.typescriptlang.org/) and uses [Rollup](https://rollupjs.org) for bundling.
