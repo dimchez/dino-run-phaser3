@@ -20,4 +20,4 @@ export const MIN_JUMP_VELOCITY = -1200;
 
 export const MAX_JUMP_VELOCITY = -1600;
 
-export const ACHIEVEMENT_SCORE = 20;
+export const ACHIEVEMENT_SCORE = 100;
