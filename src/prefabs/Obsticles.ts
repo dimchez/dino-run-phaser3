@@ -94,7 +94,7 @@ export class Obsticles {
         height - Phaser.Math.RND.pick(ENEMY_BIRD_HEIGHT),
         'enemy-bird'
       );
-    obsticle.play('enemy-bird', true);
+    obsticle.play('enemy-bird-fly', true);
     obsticle.body.setSize(undefined, obsticle.body.height / 1.5);
 
     return obsticle;

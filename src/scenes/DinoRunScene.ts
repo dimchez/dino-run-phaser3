@@ -1,8 +1,13 @@
 import * as Phaser from 'phaser';
 import { GameEvent, GameScene } from '../types';
-import { Environment, Player, ScoreBoard, StartTrigger } from '../models';
+import {
+  Environment,
+  Obsticles,
+  Player,
+  ScoreBoard,
+  StartTrigger,
+} from '../prefabs';
 import { SoundManager } from './SoundManager';
-import { Obsticles } from '../models/Obsticles';
 import { GameState } from './GameState';
 
 export class DinoRunScene extends Phaser.Scene {
@@ -63,7 +68,7 @@ export class DinoRunScene extends Phaser.Scene {
 
   #initAnimations() {
     this.anims.create({
-      key: 'enemy-bird',
+      key: 'enemy-bird-fly',
       frames: this.anims.generateFrameNames('enemy-bird', { start: 0, end: 1 }),
       frameRate: 6,
       repeat: -1,
