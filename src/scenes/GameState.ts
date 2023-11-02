@@ -8,6 +8,12 @@ import {
 
 const TEN_TIMES_PER_SECOND = 1000 / 10;
 
+const SETTINGS_KEY = 'settings';
+
+type Settings = {
+  highScore: number;
+};
+
 const isAchievement = (score: number): boolean =>
   score % ACHIEVEMENT_SCORE === 0;
 
@@ -32,6 +38,8 @@ export class GameState {
     this.score = 0;
     this.highScore = 0;
 
+    this.#loadSettings();
+
     scene.events.on(GameEvent.Started, this.#onGameStarted, this);
     scene.events.on(GameEvent.Collide, this.#onCollide, this);
 
@@ -49,6 +57,13 @@ export class GameState {
   #onGameStarted() {
     this.started = true;
 
+    if (this.highScore) {
+      this.scene.events.emit(GameEvent.UpdateScore, {
+        score: this.score,
+        highScore: this.highScore,
+      });
+    }
+
     this.speedUpdateTimer = this.scene.time.addEvent({
       delay: TEN_TIMES_PER_SECOND,
       loop: true,
@@ -63,6 +78,8 @@ export class GameState {
 
     if (this.score > this.highScore) {
       this.highScore = this.score;
+
+      this.#saveSettings();
 
       this.scene.events.emit(GameEvent.UpdateScore, {
         highScore: this.highScore,
@@ -86,5 +103,19 @@ export class GameState {
     if (isAchievement(this.score)) {
       this.scene.events.emit(GameEvent.Achievement);
     }
+  }
+
+  #loadSettings() {
+    const item = localStorage.getItem(SETTINGS_KEY);
+    const settings: Settings = item ? JSON.parse(item) : { highScore: 0 };
+
+    this.highScore = settings.highScore;
+  }
+
+  #saveSettings() {
+    localStorage.setItem(
+      SETTINGS_KEY,
+      JSON.stringify({ highScore: this.highScore })
+    );
   }
 }
