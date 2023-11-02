@@ -4,6 +4,8 @@
 
 Based of quick-start [phaser3-typescript-project-template](https://github.com/photonstorm/phaser3-typescript-project-template) project template that combines Phaser 3.60 with [TypeScript 5](https://www.typescriptlang.org/) and uses [Rollup](https://rollupjs.org) for bundling.
 
+<img width="1012" alt="dino-run-phaser" src="https://github.com/dimchez/dino-run-phaser3/assets/668572/98c38e11-bc39-4267-a401-567527274754">
+
 ## Requirements
 
 [Node.js](https://nodejs.org) is required to install dependencies and run scripts via `npm`.
